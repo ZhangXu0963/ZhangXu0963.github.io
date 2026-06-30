@@ -1,1 +1,54 @@
-"Hello word" 
+---
+layout: default
+title: Zhang Xu
+---
+
+<div class="homepage">
+	<aside class="profile-sidebar">
+		<img class="profile-photo" src="/DSCF2604_1.jpg" alt="Profile photo">
+
+		<p class="profile-name"><strong>Xu Zhang</strong></p>
+		<p class="profile-title">A second-year PhD student</p>
+		<p class="profile-location">City University of Hong Kong</p>
+
+		<ul class="profile-links">
+			<li><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> Kowloon Tong, HK, China</li>
+			<li><a href="mailto:xuzhang.xoe@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+			<li><a href="https://github.com/ZhangXu0963"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+			<li><a href="https://scholar.google.com/citations?user=2ciJMdcAAAAJ&hl=zh"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+			<!-- <li><a href="https://dblp.org/">DBLP</a></li>
+			<li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+			<li><a href="https://orcid.org/">ORCID</a></li> -->
+		</ul>
+	</aside>
+
+	<main class="profile-main">
+		{% assign about_page = site.pages | where: "path", "about/index.html" | first %}
+		{% assign news_page = site.pages | where: "path", "news/index.html" | first %}
+		{% assign publications_page = site.pages | where: "path", "publications/index.html" | first %}
+		{% assign honors_page = site.pages | where: "path", "honors/index.html" | first %}
+		{% assign educations_page = site.pages | where: "path", "educations/index.html" | first %}
+
+		<section id="about-me" class="profile-section">
+			{{ about_page.content }}
+		</section>
+
+		<section id="news" class="profile-section">
+			{{ news_page.content }}
+		</section>
+
+		<section id="publications" class="profile-section">
+			{{ publications_page.content }}
+		</section>
+
+		<section id="honors-and-awards" class="profile-section">
+			{{ honors_page.content }}
+		</section>
+
+		<section id="educations" class="profile-section">
+			{{ educations_page.content }}
+		</section>
+
+		<!-- <p class="acknowledgement-link"><a href="/acknowledgement/">Acknowledgement</a></p> -->
+	</main>
+</div>

@@ -1,0 +1,262 @@
+body { margin: 0 auto 42px; padding-top: 76px; width: 86%; max-width: 1180px; }
+
+a { text-decoration: none; color: #999; }
+a:hover { text-decoration: underline; }
+
+p, ul { font-size: 1.2em; line-height: 1.4em; color: #333; }
+
+h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
+h1 { font-size: 2.4em;  }
+h2 { font-size: 2.1em; }
+h3 { font-size: 1.9em; }
+h4 { font-size: 1.55em; }
+
+nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
+nav ul li, footer ul li { display: inline; margin-right: 20px; }
+nav {
+	position: fixed;
+	top: 0;
+	left: max(7vw, calc((100vw - 1180px) / 2));
+	z-index: 10;
+	width: 86%;
+	max-width: 1180px;
+	padding: 22px 0 14px;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+
+footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
+
+/* Home */
+.homepage {
+	display: grid;
+	grid-template-columns: 220px minmax(0, 1fr);
+	gap: 48px;
+	align-items: start;
+	margin-top: 28px;
+}
+
+.profile-sidebar {
+	position: fixed;
+	top: 112px;
+	left: max(7vw, calc((100vw - 1180px) / 2));
+	width: 220px;
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	text-align: center;
+}
+
+.profile-photo {
+	display: block;
+	width: 165px;
+	height: 165px;
+	margin: 0 auto 18px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile-name {
+	margin: 0 0 10px;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	color: #222;
+}
+
+.profile-title,
+.profile-location {
+	margin: 0 0 10px;
+	font-size: 0.88em;
+	line-height: 1.35em;
+	color: #555;
+}
+
+.profile-location .fa-fw,
+.profile-links .fa-fw {
+	margin-right: 6px;
+	color: #666;
+}
+
+.profile-links {
+	margin: 22px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.88em;
+	line-height: 1.7em;
+	text-align: left;
+}
+
+.profile-links li {
+	margin-bottom: 4px;
+}
+
+.profile-links a {
+	color: #555;
+}
+
+.profile-main {
+	grid-column: 2;
+	max-width: 820px;
+	min-height: 60vh;
+}
+
+.profile-section {
+	margin-bottom: 38px;
+	scroll-margin-top: 82px;
+}
+
+.profile-section h2 {
+	margin: 0 0 14px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #ddd;
+	font-size: 1.55em;
+}
+
+.profile-section p,
+.compact-list {
+	font-size: 1.02em;
+	line-height: 1.55em;
+}
+
+.compact-list {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.compact-list li {
+	margin-bottom: 8px;
+}
+
+.item-date {
+	font-weight: bold;
+	color: #444;
+}
+
+.acknowledgement-link {
+	margin: -10px 0 38px;
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+.acknowledgement-link a {
+	color: #555;
+	font-weight: normal;
+}
+
+.publication-item {
+	display: grid;
+	grid-template-columns: 210px minmax(0, 1fr);
+	gap: 24px;
+	align-items: start;
+	margin-bottom: 26px;
+}
+
+.publication-image {
+	position: relative;
+	width: 210px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	background: #f7f7f7;
+}
+
+.publication-badge {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	z-index: 1;
+	padding: 4px 8px;
+	background: #2f80ed;
+	color: #fff;
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	font-size: 0.72em;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+.publication-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.publication-content h3 {
+	margin: 0 0 8px;
+	font-size: 1.08em;
+	line-height: 1.3em;
+}
+
+.publication-authors,
+.publication-venue,
+.publication-links,
+.publication-summary {
+	margin: 0 0 7px;
+	font-size: 0.98em;
+	line-height: 1.45em;
+}
+
+.publication-venue {
+	color: #555;
+	font-style: italic;
+}
+
+.publication-links a {
+	margin-right: 12px;
+	color: #557aaf;
+	font-weight: bold;
+}
+
+.publication-summary {
+	color: #444;
+}
+
+@media (max-width: 850px) {
+	body {
+		width: 86%;
+	}
+
+	.homepage {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	nav {
+		position: static;
+		width: auto;
+		max-width: none;
+		padding: 0;
+		border-bottom: 0;
+	}
+
+	.profile-sidebar {
+		position: static;
+		width: auto;
+		text-align: left;
+	}
+
+	.profile-main {
+		grid-column: 1;
+	}
+
+	.profile-photo {
+		margin-left: 0;
+	}
+
+	.publication-item {
+		grid-template-columns: 1fr;
+	}
+
+	.publication-image {
+		width: 100%;
+		max-width: 260px;
+	}
+}
+
+/* Blog */
+ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
+ul.posts li { list-style: none; }
+
+/* CV */
+.cv { margin: 0px 0px 60px; }
+.cv h1 { font-size: 2.4em; }
+.cv h2 { font-size: 1.6em; }
+.cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
+.cv address, .cv p { font-size: 1em; }
+.cv .download { float: right; font-size: .8em; text-transform: uppercase; }
